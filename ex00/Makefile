@@ -6,7 +6,7 @@
 #    By: kuyu <kuyu@student.codam.nl>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/08 20:10:26 by kuyu              #+#    #+#              #
-#    Updated: 2026/06/08 20:10:57 by kuyu             ###   ########.fr        #
+#    Updated: 2026/06/09 17:02:51 by kuyu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = ex00
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS = Animal.cpp Cat.cpp Dog.cpp main.cpp
+SRCS = Animal.cpp Cat.cpp Dog.cpp main.cpp WrongAnimal.cpp WrongCat.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
