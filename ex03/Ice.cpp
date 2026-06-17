@@ -14,6 +14,7 @@ Ice::Ice(Ice const& other) : AMateria(other)
 
 Ice& Ice::operator=(Ice const& other)
 {
+	//TODO: 
 	// better to use base version
 	// if (this != &other)
 	//	AMateria::operator=(other);
@@ -28,6 +29,7 @@ Ice::~Ice()
 
 AMateria* Ice::clone() const
 {
+	// TODO: correct the code below
 	AMateria* ice = new Ice();
 	return ice;
 }
