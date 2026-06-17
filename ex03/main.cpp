@@ -1,6 +1,5 @@
 
 
-#include "AAnimal.hpp"
 #include "ICharacter.hpp"
 #include "IMateriaSource.hpp"
 #include "MateriaSource.hpp"
