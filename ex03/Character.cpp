@@ -21,7 +21,7 @@ Character::Character(Character const& other) : name(other.name)
 
 	for (int i = 0; i < 4; i++)
 	{
-		if (inventory[i] != NULL)
+		if (other.inventory[i] != NULL)
 			inventory[i] = other.inventory[i]->clone();
 	}
 }
@@ -32,12 +32,16 @@ Character& Character::operator=(Character const& other)
 		return *this;
 
 	for (int i = 0; i < 4; i++)
-		delete inventory[i];
+    {
+        delete inventory[i];
+        inventory[i] = NULL;
+    }
 	for (int i = 0; i < 4; i++)
 	{
-		if (inventory[i] != NULL)
+		if (other.inventory[i] != NULL)
 			inventory[i] = other.inventory[i]->clone();
 	}
+    name = other.name;
 	return *this;
 }
 
@@ -54,7 +58,13 @@ std::string const&	Character::getName() const
 
 void	Character::equip(AMateria* m)
 {
+    int i;
 
+    for (i = 0; i < 4; i++)
+    
+    if (i = 4)
+        return ;
+    inventory[i] = m;
 }
 
 void	Character::unequip(int idx)
@@ -64,5 +74,5 @@ void	Character::unequip(int idx)
 
 void	Character::use(int idx, ICharacter& target)
 {
-
+    
 }
