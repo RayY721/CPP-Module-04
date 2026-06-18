@@ -30,7 +30,7 @@ Ice::~Ice()
 AMateria* Ice::clone() const
 {
 	// TODO: correct the code below
-	AMateria* ice = new Ice();
+	AMateria* ice = new Ice(*this);
 	return ice;
 }
 

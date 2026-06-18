@@ -3,7 +3,7 @@
 
 MateriaSource::MateriaSource()
 {
-
+	
 }
 
 MateriaSource::MateriaSource(MateriaSource const& other)
