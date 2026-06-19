@@ -60,19 +60,28 @@ void	Character::equip(AMateria* m)
 {
     int i;
 
+	if (m == NULL)
+		return ;
+
     for (i = 0; i < 4; i++)
-    
-    if (i = 4)
-        return ;
-    inventory[i] = m;
+	{
+		if (inventory[i] == NULL)
+		{
+			inventory[i] = m;
+			return ;
+		}
+	}
+	return ;
 }
 
 void	Character::unequip(int idx)
 {
-
+	if (idx >= 0 && idx < 4 && inventory[idx] != NULL)
+		inventory[idx] = NULL;
 }
 
 void	Character::use(int idx, ICharacter& target)
 {
-    
+    if (idx >= 0 && idx < 4 && inventory[idx] != NULL)
+		inventory[idx]->use(target);
 }
