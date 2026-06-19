@@ -14,12 +14,9 @@ Ice::Ice(Ice const& other) : AMateria(other)
 
 Ice& Ice::operator=(Ice const& other)
 {
-	//TODO: 
 	// better to use base version
-	// if (this != &other)
-	//	AMateria::operator=(other);
-	// return *this;
-	(void)other;
+	if (this != &other)
+		AMateria::operator=(other);
 	return *this;
 }
 
@@ -29,9 +26,7 @@ Ice::~Ice()
 
 AMateria* Ice::clone() const
 {
-	// TODO: correct the code below
-	AMateria* ice = new Ice(*this);
-	return ice;
+	return new Ice(*this);
 }
 
 void	Ice::use(ICharacter& target)

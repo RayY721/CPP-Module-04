@@ -14,10 +14,8 @@ Cure::Cure(Cure const& other) : AMateria(other)
 Cure& Cure::operator=(Cure const& other)
 {
 	// better to use base version
-	// if (this != &other)
-	//	AMateria::operator=(other);
-	// return *this;
-	(void)other;
+	if (this != &other)
+		AMateria::operator=(other);
 	return *this;
 }
 
@@ -27,9 +25,7 @@ Cure::~Cure()
 
 AMateria* Cure::clone() const
 {
-	// TODO: should be "new Cure(*this)"
-	AMateria* cure = new Cure(*this);
-	return cure;
+	return new Cure(*this);
 }
 
 void	Cure::use(ICharacter& target)
