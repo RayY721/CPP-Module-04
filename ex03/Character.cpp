@@ -56,6 +56,7 @@ std::string const&	Character::getName() const
 	return name;
 }
 
+// TODO: deal with the hollow situation
 void	Character::equip(AMateria* m)
 {
     int i;
@@ -65,7 +66,9 @@ void	Character::equip(AMateria* m)
 
     for (i = 0; i < 4; i++)
 	{
-		if (inventory[i] == NULL)
+        if (inventory[i] == m)
+            return ;
+		else if (inventory[i] == NULL)
 		{
 			inventory[i] = m;
 			return ;
@@ -74,6 +77,7 @@ void	Character::equip(AMateria* m)
 	return ;
 }
 
+// TODO: Add floor member class so that the unequiped AMateria will not be leaked
 void	Character::unequip(int idx)
 {
 	if (idx >= 0 && idx < 4 && inventory[idx] != NULL)
