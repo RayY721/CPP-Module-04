@@ -8,13 +8,13 @@ class WrongAnimal
 		std::string type;
 
 	public:
-			WrongAnimal();
-			WrongAnimal(const WrongAnimal& other);
-			WrongAnimal& operator=(const WrongAnimal& other);
-			~WrongAnimal();
+		WrongAnimal();
+		WrongAnimal(const WrongAnimal& other);
+		WrongAnimal& operator=(const WrongAnimal& other);
+		virtual	~WrongAnimal();
 
-			std::string getType() const;
-			void		makeSound() const;
+		std::string getType() const;
+		void		makeSound() const;
 };
 
 #endif
